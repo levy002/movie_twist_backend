@@ -1,10 +1,20 @@
 class MoviesController < ApplicationController
     def fetch_movies
-      require 'faraday'
-      require 'json'
+
+      if Rails.cache.exist?('movies')
+
+        data = Rails.cache.read('movies')
+
+      else
+          if Movie.exists?
+
+            data = Movie.all
+        else 
+          require 'faraday'
+          require 'json'
   
       connection = Faraday.new(url: 'https://api.tvmaze.com')
-      response = connection.get('/schedule/web?date=2020-05-29&country=US')
+      response = connection.get('/shows?page=1')
 
       if response.success?
         data = JSON.parse(response.body)
@@ -20,10 +30,15 @@ class MoviesController < ApplicationController
           )
         end
 
-        render json: { status: 'SUCCESS', data: Movie.all, message: 'All Movies loaded successfully!' }, status: :ok
       else
         render json: { error: "Request failed with status #{response.status}" }
+        return
       end
     end
+
+    Rails.cache.write('movies', data)
+  end
+  render json: { status: 'SUCCESS', data: Movie.all, message: 'All Movies loaded successfully!' }, status: :ok
+end
   end
   
