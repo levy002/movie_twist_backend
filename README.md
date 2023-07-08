@@ -111,7 +111,7 @@ Clone this repository
  
   Make sure the server is still running and access this path
    ```
-      http://localhost:3000/api/movies
+      http://localhost:3000/shows
    ```   
 
 <!-- AUTHORS -->
