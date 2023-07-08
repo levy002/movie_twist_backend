@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  get '/api/movies', to: 'movies#fetch_movies'
+  get '/shows', to: 'movies#fetch_movies'
 end
