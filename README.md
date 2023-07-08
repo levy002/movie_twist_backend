@@ -36,7 +36,7 @@ Movie Twist is a Ruby on Rails project that utilizes external APIs to extract mo
 
   <ul>
     <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
-     <li><a href="https://www.postgresql.org/">PoatgreSQL</a></li>
+     <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
   </ul>
 
 <!-- Features -->
@@ -67,17 +67,15 @@ To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need:
+In order to run this project locally you need to install following locally:
  
 - [Ruby](https://www.ruby-lang.org/en/)
 - [Rails](https://gorails.com/)
+- [PostgreSQL](https://www.postgresql.org/)
 
 ### Setup
 
-To run the project, execute the following command:
-
-
-- Make sure you have Ruby on Rails set up properly on your computer
+To run the project locally, execute the following command:
 
 Clone this repository
 
@@ -93,7 +91,7 @@ Clone this repository
 ```sh
   bundle install
 ```
-### Run
+### Create database
 
 ```
   rails db: create
@@ -102,6 +100,8 @@ Clone this repository
 ```
   rails db:migrate
 ```
+
+### Start the Server
 
 ```
   rails s
