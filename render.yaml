@@ -1,6 +1,6 @@
 databases:
   - name: movie-twist
-    databaseName: movie-twist
+    databaseName: movietwist
     user: mysite
 
 services:
