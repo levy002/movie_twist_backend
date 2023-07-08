@@ -4,7 +4,7 @@ class MoviesController < ApplicationController
       require 'json'
   
       connection = Faraday.new(url: 'https://api.tvmaze.com')
-      response = connection.get('/shows')
+      response = connection.get('/schedule/web?date=2020-05-29&country=US')
 
       if response.success?
         data = JSON.parse(response.body)
