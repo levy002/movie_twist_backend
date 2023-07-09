@@ -19,8 +19,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_07_224121) do
     t.string "url"
     t.integer "rating"
     t.string "genre", default: [], array: true
-    t.string "summary"
     t.string "image"
+    t.integer "runtime"
+    t.string "year"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

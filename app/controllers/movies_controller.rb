@@ -25,8 +25,9 @@ class MoviesController < ApplicationController
             url: movie['url'],
             rating: movie['rating']['average'],
             genre: movie['genres'],
-            summary: movie['summary'],
-            image: movie['image']['medium']
+            image: movie['image']['medium'],
+            runtime: movie['averageRuntime'],
+            year: movie['premiered']
           )
         end
 

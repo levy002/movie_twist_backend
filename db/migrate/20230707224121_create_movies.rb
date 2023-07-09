@@ -5,8 +5,9 @@ class CreateMovies < ActiveRecord::Migration[7.0]
       t.string :url
       t.integer :rating
       t.string :genre, array: true, default: []
-      t.string :summary
       t.string :image
+      t.integer :runtime
+      t.string :year
 
       t.timestamps
     end
