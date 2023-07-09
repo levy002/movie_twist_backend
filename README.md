@@ -57,7 +57,7 @@ Movie Twist is a Ruby on Rails project that utilizes external APIs to extract mo
 
 ## 🚀 Live link <a name="live-demo"></a>
 
-- [Live Link](https://movie-twist.onrender.com/api/movies)
+- [Live Link](https://movie-twist.onrender.com/shows)
 
 <!-- GETTING STARTED -->
 
